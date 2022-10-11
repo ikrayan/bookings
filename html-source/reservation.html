@@ -14,8 +14,12 @@
         href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
     <style>
+        .swal2-container {
+            z-index: 1000;
+        }
+
         .datepicker {
-            z-index: 1000,
+            z-index: 10000,
         }
     </style>
 </head>
@@ -70,10 +74,12 @@
                         <div class="col">
                             <div id="date-range" class="row">
                                 <div class="col">
-                                    <input type="text" name="start" class="form-control" placeholder="Arrival Date">
+                                    <input type="text" name="start" class="form-control" placeholder="Arrival Date"
+                                        autocomplete="off">
                                 </div>
                                 <div class="col">
-                                    <input type="text" name="end" class="form-control" placeholder="Departure Date">
+                                    <input type="text" name="end" class="form-control" placeholder="Departure Date"
+                                        autocomplete="off">
                                 </div>
                             </div>
                         </div>
@@ -106,13 +112,13 @@
             let html = `
             <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
                     <div class="row">
-                        <div class="col">
+                        <div class="col my-3">
                             <div id="reservation-dates-modal" class="row">
                                 <div class="col">
-                                    <input disabled required type="text" id="start" class="form-control" placeholder="Arrival Date">
+                                    <input disabled required type="text" name="start" id="start" class="form-control" placeholder="Arrival Date" autocomplete="off">
                                 </div>
                                 <div class="col">
-                                    <input disabled required type="text" id="end" class="form-control" placeholder="Departure Date">
+                                    <input disabled required type="text" name="end" id="end" class="form-control" placeholder="Departure Date" autocomplete="off">
                                 </div>
                             </div>
                         </div>
