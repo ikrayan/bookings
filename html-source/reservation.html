@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
     <style>
         .datepicker {
-            z-index: 10000,
+            z-index: 1000,
         }
     </style>
 </head>
@@ -109,10 +109,10 @@
                         <div class="col">
                             <div id="reservation-dates-modal" class="row">
                                 <div class="col">
-                                    <input disabled required type="text" name="start" class="form-control" placeholder="Arrival Date">
+                                    <input disabled required type="text" id="start" class="form-control" placeholder="Arrival Date">
                                 </div>
                                 <div class="col">
-                                    <input disabled required type="text" name="end" class="form-control" placeholder="Departure Date">
+                                    <input disabled required type="text" id="end" class="form-control" placeholder="Departure Date">
                                 </div>
                             </div>
                         </div>
