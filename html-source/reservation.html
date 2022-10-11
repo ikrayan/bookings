@@ -86,22 +86,18 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
     <script src="https://unpkg.com/notie"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
 
-        console.log("this is console log");
+        let attention = prompt();
 
         let btnSubmitDate = document.getElementById("submitDate");
 
         btnSubmitDate.addEventListener("click", function () {
             //notify("This is function Notify", "success")
-            Swal.fire({
-                title: 'Error!',
-                text: 'Do you want to continue',
-                icon: 'error',
-                confirmButtonText: 'Cool'
-            })
+            //notifyModal("title", "<em>Hello World from SweetAlert2</em>", "success", "Text in Button")
+            attention.toast({ msg: "Hello World!" });
         });
 
         // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -135,6 +131,45 @@
                 text: msg,
             })
         };
+
+        function notifyModal(title, text, icon, confirmationButtonText) {
+            Swal.fire({
+                title: title,
+                html: text,
+                icon: icon,
+                confirmButtonText: confirmationButtonText
+            })
+        }
+
+        function prompt() {
+            let toast = function (c) {
+                const {
+                    msg = "",
+                    icon = "success",
+                    position = "top-end",
+                } = c;
+
+                const Toast = Swal.mixin({
+                    toast: true,
+                    title: msg,
+                    icon: icon,
+                    position: position,
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({})
+            }
+
+            let success = function () {
+
+            }
+        }
 
     </script>
 </body>
