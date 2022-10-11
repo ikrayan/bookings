@@ -97,7 +97,7 @@
         btnSubmitDate.addEventListener("click", function () {
             //notify("This is function Notify", "success")
             //notifyModal("title", "<em>Hello World from SweetAlert2</em>", "success", "Text in Button")
-            attention.success({ msg: "Hello World!" });
+            attention.error({ msg: "Oops!" });
         });
 
         // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -181,9 +181,25 @@
                 })
             }
 
+            let error = function (c) {
+                const {
+                    msg = "",
+                    title = "",
+                    footer = "",
+                } = c;
+
+                Swal.fire({
+                    icon: 'error',
+                    title: title,
+                    text: msg,
+                    footer: footer,
+                })
+            }
+
             return {
                 toast: toast,
                 success: success,
+                error: error,
             }
         }
 
