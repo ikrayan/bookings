@@ -97,7 +97,7 @@
         btnSubmitDate.addEventListener("click", function () {
             //notify("This is function Notify", "success")
             //notifyModal("title", "<em>Hello World from SweetAlert2</em>", "success", "Text in Button")
-            attention.success();
+            attention.success({ msg: "Hello World!" });
         });
 
         // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -166,8 +166,19 @@
                 Toast.fire({})
             }
 
-            let success = function () {
-                console.log("Clicked from module Prompt");
+            let success = function (c) {
+                const {
+                    msg = "",
+                    title = "",
+                    footer = "",
+                } = c;
+
+                Swal.fire({
+                    icon: 'success',
+                    title: title,
+                    text: msg,
+                    footer: footer,
+                })
             }
 
             return {
