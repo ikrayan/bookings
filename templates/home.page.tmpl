@@ -1,12 +1,7 @@
 {{ template "base" .}}
 
 {{ define "content" }}
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img class="d-block w-100" src="/static/images/1.jpg" alt="First slide">
@@ -18,19 +13,31 @@
             <img class="d-block w-100" src="/static/images/3.jpg" alt="Third slide">
         </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
 </div>
-<div class="container">s
+
+<div class="container">
     <div class="row">
         <div class="col">
             <h1>This is the Home Page</h1>
+            <p>
+                Scarcely on striking packages by so property in delicate. Up or well must less rent read walk so be.
+                Easy sold at do hour sing spot. Any meant has cease too the decay. Since party burst am it match. By or
+                blushes between besides offices noisier as. Sending do brought winding compass in. Paid day till shed
+                only fact age its end.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <a href="/search-availability" class="btn btn-success">Make Reservation Now</a>
         </div>
     </div>
 </div>
