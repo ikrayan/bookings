@@ -1,7 +1,7 @@
 let attention = Prompt();
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
-() => {
+(() => {
   "use strict";
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -22,7 +22,7 @@ let attention = Prompt();
       false
     );
   });
-};
+})();
 
 function notify(msg, msgType) {
   notie.alert({
