@@ -1,24 +1,10 @@
-{{ template "base" .}}
+let btnSubmitDate = document.getElementById("submitDate");
 
-{{ define "content" }}
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <h1>This is the Generals Quarters Page</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <a id="check-availability-button" href="#!" class="btn btn-success">Check Availability</a>
-        </div>
-    </div>
-</div>
-{{ end }}
-
-{{ define "js" }}
-<script>
-    document.getElementById("check-availability-button").addEventListener("click", function () {
-        let html = `
+btnSubmitDate.addEventListener("click", function () {
+  //notify("This is function Notify", "success")
+  //notifyModal("title", "<em>Hello World from SweetAlert2</em>", "success", "Text in Button")
+  //attention.error({ msg: "Oops!" });
+  let html = `
             <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
                     <div class="row">
                         <div class="col my-3">
@@ -35,8 +21,5 @@
                 </form>
             `;
 
-        attention.custom({ msg: html, title: "Choose your dates" });
-    })
-</script>
-
-{{ end }}
+  attention.custom({ msg: html, title: "Choose your dates" });
+});
