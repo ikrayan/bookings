@@ -6,9 +6,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/ikrayan/bookings/pkg/config"
-	"github.com/ikrayan/bookings/pkg/models"
-	"github.com/ikrayan/bookings/pkg/render"
+	"github.com/ikrayan/bookings/internal/config"
+	"github.com/ikrayan/bookings/internal/models"
+	"github.com/ikrayan/bookings/internal/render"
 )
 
 // Repo the repository used by the handlers

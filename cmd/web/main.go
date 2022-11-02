@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/alexedwards/scs/v2"
-	"github.com/ikrayan/bookings/pkg/config"
-	"github.com/ikrayan/bookings/pkg/handlers"
-	"github.com/ikrayan/bookings/pkg/render"
+	"github.com/ikrayan/bookings/internal/config"
+	"github.com/ikrayan/bookings/internal/handlers"
+	"github.com/ikrayan/bookings/internal/render"
 )
 
 const portNumber = ":8080"
