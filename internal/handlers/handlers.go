@@ -7,6 +7,7 @@ import (
 	"net/http"
 
 	"github.com/ikrayan/bookings/internal/config"
+	"github.com/ikrayan/bookings/internal/forms"
 	"github.com/ikrayan/bookings/internal/models"
 	"github.com/ikrayan/bookings/internal/render"
 )
@@ -54,7 +55,14 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 
 // Reservation renders the make a reservation page and display form
 func (m *Repository) Reservation(w http.ResponseWriter, r *http.Request) {
-	render.RenderTemplate(w, r, "make-reservation.page.tmpl", &models.TemplateData{})
+	render.RenderTemplate(w, r, "make-reservation.page.tmpl", &models.TemplateData{
+		Form: forms.New(nil),
+	})
+}
+
+// PostReservation handles the posting of the reservation form
+func (m *Repository) PostReservation(w http.ResponseWriter, r *http.Request) {
+
 }
 
 // Generals renders the generals-quarters room page
